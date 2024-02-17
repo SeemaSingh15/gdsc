@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDSC Technorave</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to GDSC Technorave!</h1>
+        <p>Are you ready to play?</p>
+        <button class="button" onclick="openQuestionPage()">Ready</button>
+    </div>
+
+    <div id="questionPage" style="display: none;">
+        <h2>Question 1:</h2>
+        <p>I'm a language of the web, a coder's delight,<br>
+        With tags and attributes, I bring pages to light.<br>
+        Structured and marked, for browsers to render,<br>
+        In the realm of the internet, I am a contender.</p>
+        <input type="text" id="answer1" class="input-field" placeholder="Enter your answer">
+        <button class="button" onclick="checkAnswer1()">Submit</button>
+    </div>
+
+    <div id="question2Page" style="display: none;">
+        <h2>Question 2:</h2>
+        <p>Complete the code for Merge Sort algorithm:</p>
+        <pre><code>def merge_sort(arr):
+    if len(arr) > 1:
+        mid = len(arr) // 2  # Finding the middle of the array
+        left_half = arr[:mid]  # Dividing the array elements into 2 halves
+        right_half = arr[mid:]
+
+        # Recursive call on each half
+        merge_sort(left_half)
+        merge_sort(right_half)
+
+        i = j = k = 0
+
+        # Copy data to temp arrays left_half[] and right_half[]
+        while i < len(left_half) and j < len(right_half):
+            if left_half[i] < right_half[j]:
+                arr[k] = left_half[i]
+                i += 1
+            else:
+                arr[k] = right_half[j]
+                j += 1
+            k += 1
+</code></pre>
+        <textarea id="answer2" class="input-field" placeholder="Enter your answer" rows="5"></textarea>
+        <button class="button" onclick="checkAnswer2()">Submit</button>
+    </div>
+
+    <script src="brain.js"></script>
+</body>
+</html>
+
+
